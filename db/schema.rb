@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "characters", force: :cascade do |t|
     t.string  "rank"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 1) do
     t.string  "birthplace"
     t.text    "bio"
     t.integer "inventory_id"
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "capacity"
+    t.string  "num_items"
+    t.string  "items"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
+    t.string "location"
   end
 
 end
