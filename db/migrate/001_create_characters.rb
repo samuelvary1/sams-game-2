@@ -10,5 +10,4 @@ class CreateCharacters < ActiveRecord::Migration
 			t.integer :inventory_id
 		end
 	end
-
 end
