@@ -5,12 +5,5 @@ class ApplicationController < Sinatra::Base
   get '/' do 
   	erb :index
   end
-  
-  get '/choose_your_character' do
-  	erb :"choose_your_character"
-  end
 
-  get '/list_characters' do 
-  	erb :"list_characters"
-  end
 end
