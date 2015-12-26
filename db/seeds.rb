@@ -5,8 +5,7 @@ characters_list = [
 		last_name: "Smirnova", 
 		role: "Sniper", 
 		birthplace: "Moscow", 
-		bio: "TBD", 
-		inventory_id: 1 
+		bio: "TBD"
 	},
 
 	{ 
@@ -15,8 +14,7 @@ characters_list = [
 		last_name: "Barkov", 
 		role: "Machine-gunner", 
 		birthplace: "Leningrad", 
-		bio: "TBD", 
-		inventory_id: 2 
+		bio: "TBD"
 	},
 
 	{ 
@@ -25,8 +23,7 @@ characters_list = [
 		last_name: "Babaev", 
 		role: "Commissar", 
 		birthplace: "Magnitogorsk", 
-		bio: "TBD", 
-		inventory_id: 3 
+		bio: "TBD"
 	},
 
 	{ 
@@ -35,8 +32,7 @@ characters_list = [
 		last_name: "Bulgakov", 
 		role: "Sapper", 
 		birthplace: "Grozny", 
-		bio: "TBD", 
-		inventory_id: 4 
+		bio: "TBD"
 	}	
 ]
 
