@@ -15,7 +15,7 @@ class CharacterController < ApplicationController
   	@characters.select do |character|
   		character.id == params[:id]
   	end.first
-  	erb :'/characters/show.html'
+  	erb :'/characters/show'
   end
 
   get '/list_characters' do 
