@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Trying to List characters</h1>
-	<ul>
-
-	</ul>
-</body>
-</html>
+<% @characters.each do |f| %>
+	<p>
+		Name: <%= "#{f.first_name}  #{f.last_name}" %><br>
+		Rank: <%= "#{f.rank}" %><br>
+		Birthplace: <%= "#{f.birthplace}" %><br>
+		Role: <%= "#{f.role}" %><br>
+		Bio: [I'll put a link here later]
+	</p>
+	
+<% end %>
