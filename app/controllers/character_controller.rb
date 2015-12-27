@@ -6,12 +6,20 @@ class CharacterController < ApplicationController
  #  	erb :index
  #  end
   
-  get '/choose_your_character' do
-  	erb :"choose_your_character"
+  get '/characters' do
+  	erb :"/characters/character"
+  end
+
+  get '/characters/:id' do
+  	@characters = Character.all
+  	@characters.select do |character|
+  		character.id == params[:id]
+  	end.first
+  	erb :'/characters/show.html'
   end
 
   get '/list_characters' do 
   	@characters = Character.all
-  	erb :"list_characters"
+  	erb :"/characters/list_characters"
   end
 end
