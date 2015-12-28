@@ -9,17 +9,19 @@ When you begin the game, it will ask the player to choose a character. You have 
 
 Things I need to work on / design brainstorming:
 
-1. When the player gets to the choose their character page, there needs to be a 'next / previous' button bar that allows the player to cycle through all 4 characters before making their selection. Each character will need a unique link choose-your-character/1, 2, 3, etc. 
-2. When they land on the character they want to play as, there must be a button that says select. Then you begin the game as that character.
+* When the player gets to the choose their character page, there needs to be a 'next / previous' button bar that allows the player to cycle through all 4 characters before making their selection. Each character will need a unique link choose-your-character/1, 2, 3, etc. 
 
-Game design:
 
-You wake up in an abandoned apartment, your head throbbing dully. A small candle flickers in front of a mud-spattered window near the door. It appears to be the middle of the night, and you have no idea how you got there. The last thing you remember is advancing through an abandoned city street with your unit when a burst of machine gun fire rang out through the night, slamming you to the ground. 
+* When they land on the character they want to play as, there must be a button that says select. Then you begin the game as that character.
 
-You reach up and gingerly feel a welt behind your left ear with your fingertips. 'How the hell did that get there..'
 
-[then it should go on to describe a few of the items in your inventory] 
+* Not sure if I should make a locations table, which will contain the text description of each area, and include the items that the character can pick up from each room. 
+	- Might be able to just hard code it in the views. But the player needs a concrete way of being able to pick up items in the room. And the program should reject the action if they try to pick up an item that isn't there. Also, once they pick up an item, it must no longer be available, and obviously now is located in the player's inventory.
 
-[in every room or location you find yourself in, there should be a button that says 'look around'. This will then give a short but more detailed description of what objects might be in the room, such as a key or a weapon or whatever. You can then type 'take (item)' and it should add that item to your inventory. Then a button for leave room and you go to the next location.]
+* Also need to do 4 character drawings and scan them in.
 
-[every time you enter a new location you should have a button to go back to the previous one]
+* Don't need to draw the locations, the descriptions will be enough. 
+
+* Write the story tomorrow. DO NOT make it too complex. Keep it simple (like 5 or 6 locations MAX) and you need to pick up certain items to proceed to the next location.
+
+* You need to focus on the bare mechanics of the game: a player chooses a character, that character has an inventory, which allows them to 'have many' items. They then read the text in each location. Based on the description, the player is able to 'pick up' certain objects and add them to their inventory. Once those objects are in their inventory, they can proceed to the next level. 
