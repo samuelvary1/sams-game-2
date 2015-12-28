@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 5) do
+ActiveRecord::Schema.define(version: 6) do
 
   create_table "characters", force: :cascade do |t|
-    t.string "rank"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "role"
-    t.string "birthplace"
-    t.text   "bio"
+    t.string  "rank"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "role"
+    t.string  "birthplace"
+    t.text    "bio"
+    t.integer "inventory_id"
   end
 
   create_table "inventories", force: :cascade do |t|
