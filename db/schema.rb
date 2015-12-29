@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 10) do
+ActiveRecord::Schema.define(version: 14) do
 
   create_table "characters", force: :cascade do |t|
-    t.string  "rank"
-    t.string  "first_name"
-    t.string  "last_name"
-    t.string  "role"
-    t.string  "birthplace"
-    t.text    "bio"
-    t.integer "inventory_id"
+    t.string "rank"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "role"
+    t.string "birthplace"
+    t.text   "bio"
+    t.string "items"
   end
 
   create_table "items", force: :cascade do |t|
     t.string  "name"
     t.text    "description"
-    t.string  "location"
     t.integer "location_id"
+    t.integer "character_id"
   end
 
   create_table "locations", force: :cascade do |t|
