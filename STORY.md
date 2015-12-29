@@ -1,34 +1,56 @@
-CHARACTERS
+Characters
 ----------
 
-Image:
-Name: Alina Smirnova
+####Alina Smirnova
+
 Rank: Captain
+
 Role: Sniper
+
 Birthplace: Moscow
+
 Bio: 
 
-Image: 
-Name: Pavel Barkov
+Image:
+
+
+####Pavel Barkov
+
 Rank: Lieutenant
+
 Role: Machine Gunner
+
 Birthplace: Leningrad
+
 Bio:
 
 Image:
-Name: Konstantin Babaev,
+
+
+####Konstantin Babaev
+
 Rank: Major
+
 Role: Commissar (political officer)
+
 Birthplace: Magnitogorsk
+
 Bio:
 
+Image:
 
-Image: 
-Name: Anton Bulgakov
+
+####Anton Bulgakov
+
 Rank: Division Engineer 
+
 Role: Sapper
+
 Birthplace: Yaroslavl
+
 Bio:
+
+Image:
 
 
 Chapter 1
@@ -44,6 +66,8 @@ Look Around:
 
 Available Items:
 
+Image:
+
 
 Chapter 2
 ---------
@@ -54,6 +78,8 @@ Look Around:
 
 Available Items:
 
+Image:
+
 Chapter 3
 ---------
 
@@ -62,6 +88,8 @@ Story:
 Look Around:
 
 Available Items:
+
+Image:
 
 Chapter 4
 ---------
@@ -72,6 +100,8 @@ Look Around:
 
 Available Items:
 
+Image:
+
 Chapter 5
 ---------
 
@@ -81,6 +111,8 @@ Look Around:
 
 Available Items:
 
+Image:
+
 Chapter 6
 ---------
 
@@ -89,6 +121,8 @@ Story:
 Look Around:
 
 Available Items:
+
+Image:
 
 Victory
 -------
