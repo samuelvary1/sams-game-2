@@ -1,9 +1,16 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   enable :method_override
   set :root, File.join(__dir__, "..")
 
   get '/' do 
   	erb :index
+  end
+
+  get '/list_characters' do 
+  	binding.pry
+  	erb :"characters/list_characters"
   end
 
 

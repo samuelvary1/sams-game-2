@@ -1,5 +1,6 @@
 class Character < ActiveRecord::Base
 
-	has_many :items, through: :inventories
-	
+	has_many :items
+
 end
+
