@@ -8,11 +8,6 @@ class ApplicationController < Sinatra::Base
   	erb :index
   end
 
-  get '/list_characters' do 
-  	binding.pry
-  	erb :"characters/list_characters"
-  end
-
 
   # you will definitely want to change these into dynamic routes later on
 

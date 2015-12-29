@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<h1>Choose Your Character</h1>
+
+		<img src="http://s2.postimg.org/be43f5yxl/engineer_bulgakov.jpg" width="300" height="411" alt="bulgakov-engineer"><br>
+
+		<input type="submit" value="Select Character">
+		
+		<p>Name: <%= @bulgakov.first_name + " " + @bulgakov.last_name %></p>
+		<p>Rank: <%= @bulgakov.rank %></p>
+		<p>Role: <%= @bulgakov.role %></p>
+		<p>Birthplace: 	<%= @bulgakov.birthplace %></p>
+		<p>Bio: <%= @bulgakov.bio %></p>
+
+
+	<div class="button-bar">
+		<!-- for example -->
+	  <a href="/characters/3" class="button prev">Previous</a>
+	  
+	  <a href="/characters/1" class="button next">Next</a>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<h1>Choose Your Character</h1>
+
+		<img src="http://s18.postimg.org/t7mt0z1ex/commissar_babaev.jpg" width="300" height="419" alt="babaev-commissar"><br>
+
+		<input type="submit" value="Select Character">
+		
+		<p>Name: <%= @babaev.first_name + " " + @babaev.last_name %></p>
+		<p>Rank: <%= @babaev.rank %></p>
+		<p>Role: <%= @babaev.role %></p>
+		<p>Birthplace: 	<%= @babaev.birthplace %></p>
+		<p>Bio: <%= @babaev.bio %></p>
+
+
+	<div class="button-bar">
+		<!-- for example -->
+	  <a href="/characters/2" class="button prev">Previous</a>
+	  
+	  <a href="/characters/4" class="button next">Next</a>
+	</div>
+
+
+</body>
+</html>

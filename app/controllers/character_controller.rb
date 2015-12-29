@@ -2,21 +2,36 @@ class CharacterController < ApplicationController
 
 	enable :method_override
 
-	# get '/' do 
- #  	erb :index
- #  end
-  
-  get '/characters' do
-  	erb :"/characters/character"
+
+  # get '/characters/:id' do
+  # 	@characters = Character.all
+  # 	@characters.select do |character|
+  # 		character.id == params[:id]
+  # 	end.first
+  # 	erb :'/characters/character'
+  # end
+
+
+  get '/characters/1' do 
+    @alina = Character.find_by(id: 1)
+    erb :"characters/character1"
   end
 
-  get '/characters/:id' do
-  	@characters = Character.all
-  	@characters.select do |character|
-  		character.id == params[:id]
-  	end.first
-  	erb :'/characters/show'
+  get '/characters/2' do
+    @pavel = Character.find_by(id: 2) 
+    erb :"characters/character2"
   end
+
+  get '/characters/3' do 
+    @babaev = Character.find_by(id: 3)
+    erb :"characters/character3"
+  end
+
+  get '/characters/4' do 
+    @bulgakov = Character.find_by(id: 4)
+    erb :"characters/character4"
+  end
+
 
   get '/list_characters' do 
   	@characters = Character.all
