@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 6) do
+ActiveRecord::Schema.define(version: 8) do
 
   create_table "characters", force: :cascade do |t|
     t.string  "rank"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 6) do
     t.text    "description"
     t.string  "location"
     t.integer "inventory_id"
+    t.integer "location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.text   "description"
+    t.string "items"
+    t.string "key_item"
   end
 
 end
