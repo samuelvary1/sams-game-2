@@ -1,27 +1,98 @@
-CHARACTER BIOS
---------------
+CHARACTERS
+----------
 
-Captain Alina Smirnova, Sniper, Moscow
+Image:
+Name: Alina Smirnova
+Rank: Captain
+Role: Sniper
+Birthplace: Moscow
+Bio: 
 
-Lieutenant Pavel Barkov, Machine Gunner, Leningrad
+Image: 
+Name: Pavel Barkov
+Rank: Lieutenant
+Role: Machine Gunner
+Birthplace: Leningrad
+Bio:
 
-Major Konstantin Babaev, Commissar, Magnitogorsk
+Image:
+Name: Konstantin Babaev,
+Rank: Major
+Role: Commissar (political officer)
+Birthplace: Magnitogorsk
+Bio:
 
-Division Engineer Anton Bulgakov, Sapper, Grozny
+
+Image: 
+Name: Anton Bulgakov
+Rank: Division Engineer 
+Role: Sapper
+Birthplace: Yaroslavl
+Bio:
 
 
+Chapter 1
+---------
 
-LEVEL 1
---------
+Story:
+
 You wake up in an abandoned apartment, your head throbbing dully. A small candle flickers in front of a mud-spattered window near the door. It appears to be the middle of the night, and you have no idea how you got there. The last thing you remember is advancing through an abandoned city street with your unit when a burst of machine gun fire rang out through the night, slamming you to the ground. 
 
 You reach up and gingerly feel a welt behind your left ear with your fingertips. 'How the hell did that get there..'
 
-[then it should go on to describe a few of the items in your inventory] 
+Look Around:
 
-[in every room or location you find yourself in, there should be a button that says 'look around'. This will then give a short but more detailed description of what objects might be in the room, such as a key or a weapon or whatever. You can then type 'take (item)' and it should add that item to your inventory. Then a button for leave room and you go to the next location.]
+Available Items:
 
-[every time you enter a new location you should have a button to go back to the previous one]
 
+Chapter 2
+---------
+
+Story:
+
+Look Around:
+
+Available Items:
+
+Chapter 3
+---------
+
+Story: 
+
+Look Around:
+
+Available Items:
+
+Chapter 4
+---------
+
+Story: 
+
+Look Around:
+
+Available Items:
+
+Chapter 5
+---------
+
+Story:
+
+Look Around:
+
+Available Items:
+
+Chapter 6
+---------
+
+Story:
+
+Look Around:
+
+Available Items:
+
+Victory
+-------
+
+Message:
 
 
