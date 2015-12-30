@@ -41,6 +41,74 @@ characters_list = [
 ]
 
 
+locations_list = [
+	{
+		id: 1, 
+		name: "apartment",
+		description: "It appears to be an old, abandoned apartment"
+
+	},
+
+	{
+		id: 2,
+		name: ,
+		description: 
+	},
+
+	{
+		id: 3,
+		name: ,
+		description: 
+	},
+
+	{
+		id: 4,
+		name: ,
+		description:
+	},
+
+	{
+		id: 5,
+		name: ,
+		description:
+	},
+
+	{
+		id: 6
+		name: ,
+		description: 
+	}
+
+]
+
+
+items_list = [
+	{
+		id: 1,
+		name: "",
+		description: "",
+		location_id: ,
+		character_id: nil
+	}
+
+]
+
+items_list.each do |hash|
+	p = Item.new
+	hash.each do |attribute, value|
+		p[attribute] = value
+	end
+	p.save
+end
+
+locations_list.each do |hash|
+	p = Location.new
+	hash.each do |attribute, value|
+		p[attribute] = value
+	end
+	p.save
+end
+
 characters_list.each do |hash|
 	p = Character.new 
 	hash.each do |attribute, value|
