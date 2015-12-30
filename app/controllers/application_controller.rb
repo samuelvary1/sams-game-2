@@ -13,13 +13,16 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/pickup' do 
-    items = Item.all 
+    items = Location.first.items
     pickup = items.find do |item|
       item.name == params[:item][:name]
     end
+
     if pickup.nil?
       "Sorry, that item isn't here"
     else
+      pickup.location_id = nil
+      Character.first.items << pickup
       "You picked up #{pickup.name}"
     end
   end
@@ -36,11 +39,17 @@ class ApplicationController < Sinatra::Base
     @character.save
 
     @area1 = Location.all[0]
+    # binding.pry
 
     erb :"chapters/chapter1"
   end
 
+  get '/game/chapter1' do 
+    erb :"chapters/chapter1"
+  end
+
   post '/current_items' do 
+    # binding.pry
     erb :"characters/items"
   end
 
