@@ -1,11 +1,14 @@
 <body>
 	<p>You are currently holding:</p>
 
-	<% Character.first.items.each do |item| %>
-	<ul>
-		<li>Name: <%= item.name %></li>
-		<li>Description: <%= item.description %></li>
-	</ul>
+	<% @character = Character.first %>
+	<% @character.items.each do |item| %>
+	
+	<p>
+		Name: <%= item.name %><br>
+		Description: <%= item.description %>
+	</p>
+
 	<% end %>
 	<a href="/game/chapter1">Back to Room</a>
 </body>
