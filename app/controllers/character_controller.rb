@@ -11,7 +11,6 @@ class CharacterController < ApplicationController
   # 	erb :'/characters/character'
   # end
 
-
   get '/characters/1' do 
     @alina = Character.find_by(id: 1)
     erb :"characters/character1"

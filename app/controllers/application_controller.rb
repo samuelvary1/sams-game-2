@@ -20,18 +20,15 @@ class ApplicationController < Sinatra::Base
     if pickup.nil?
       "Sorry, that item isn't here"
     else
-
       "You picked up #{pickup.name}"
     end
-
-
   end
 
   # you will definitely want to change these into dynamic routes later on
 
-  get '/game/chapter1' do 
-  	erb :"chapters/chapter1"
-  end
+  # get '/game/chapter1' do 
+  # 	erb :"chapters/chapter1"
+  # end
 
   post '/game/chapter1' do 
     @character = Character.find_by(first_name: params[:character][:first_name])
@@ -41,6 +38,10 @@ class ApplicationController < Sinatra::Base
     @area1 = Location.all[0]
 
     erb :"chapters/chapter1"
+  end
+
+  post '/current_items' do 
+    erb :"characters/items"
   end
 
   get '/game/chapter2' do 

@@ -1,0 +1,10 @@
+<body>
+	<p>You are currently holding:</p>
+
+	<% @character.items.each do |item| %>
+	<ul>
+		<li>Name: <%= item.name %></li>
+		<li>Description: <%= item.description %></li>
+	</ul>
+	<% end %>
+</body>
