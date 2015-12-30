@@ -11,7 +11,8 @@
 
 		<img src="http://s18.postimg.org/t7mt0z1ex/commissar_babaev.jpg" width="300" height="350" alt="babaev-commissar"><br>
 
-		<input type="submit" value="Select Character">
+	<form action="/game/chapter1" method="POST">
+		Select Character: <input type="submit" value="Konstantin" name="character[first_name]">
 		
 		<p>Name: <%= @babaev.first_name + " " + @babaev.last_name %></p>
 		<p>Rank: <%= @babaev.rank %></p>

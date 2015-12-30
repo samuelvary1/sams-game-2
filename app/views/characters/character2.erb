@@ -9,9 +9,10 @@
 
 	<h1>Choose Your Character</h1>
 
-		<img src="http://s3.postimg.org/3tkeyzzc3/pavel_barkov_marine.jpg" width="300" height="350" alt="pavel-gunner"><br>
-
-		<input type="submit" value="Select Character">
+	<img src="http://s3.postimg.org/3tkeyzzc3/pavel_barkov_marine.jpg" width="300" height="350" alt="pavel-gunner"><br>
+	
+	<form action="/game/chapter1" method="POST">
+		Select Character: <input type="submit" value="Pavel" name="character[first_name]">
 		
 		<p>Name: <%= @pavel.first_name + " " + @pavel.last_name %></p>
 		<p>Rank: <%= @pavel.rank %></p>

@@ -6,14 +6,15 @@
 
 		<img src="http://s2.postimg.org/58tqzhwd5/russia_sniper31.jpg" width="300" height="350" alt="alina-sniper"><br>
 
-		<input type="submit" value="Select Character">
+	<form action="/game/chapter1" method="POST">
+		Select Character: <input type="submit" value="Alina" name="character[first_name]">
 		
 		<p>Name: <%= @alina.first_name + " " + @alina.last_name %></p>
 		<p>Rank: <%= @alina.rank %></p>
 		<p>Role: <%= @alina.role %></p>
 		<p>Birthplace: 	<%= @alina.birthplace %></p>
 		<p>Bio: <%= @alina.bio %></p>
-
+	</form>
 
 	<div class="button-bar">
 		<!-- for example -->
