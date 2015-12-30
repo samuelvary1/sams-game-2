@@ -7,37 +7,37 @@ characters_list = [
 		role: "Sniper", 
 		birthplace: "Moscow", 
 		bio: "TBD"
-	},
+	}
 
-	{ 
-		id: 2,
-		rank: "Lieutenant", 
-		first_name: "Pavel", 
-		last_name: "Barkov", 
-		role: "Machine-gunner", 
-		birthplace: "Leningrad", 
-		bio: "TBD"
-	},
+	# { 
+	# 	id: 2,
+	# 	rank: "Lieutenant", 
+	# 	first_name: "Pavel", 
+	# 	last_name: "Barkov", 
+	# 	role: "Machine-gunner", 
+	# 	birthplace: "Leningrad", 
+	# 	bio: "TBD"
+	# },
 
-	{ 
-		id: 3,
-		rank: "Major", 
-		first_name: "Konstantin", 
-		last_name: "Babaev", 
-		role: "Commissar", 
-		birthplace: "Magnitogorsk", 
-		bio: "TBD"
-	},
+	# { 
+	# 	id: 3,
+	# 	rank: "Major", 
+	# 	first_name: "Konstantin", 
+	# 	last_name: "Babaev", 
+	# 	role: "Commissar", 
+	# 	birthplace: "Magnitogorsk", 
+	# 	bio: "TBD"
+	# },
 
-	{ 
-		id: 4,
-		rank: "Division Engineer", 
-		first_name: "Anton", 
-		last_name: "Bulgakov", 
-		role: "Sapper", 
-		birthplace: "Grozny", 
-		bio: "TBD"
-	}	
+	# { 
+	# 	id: 4,
+	# 	rank: "Division Engineer", 
+	# 	first_name: "Anton", 
+	# 	last_name: "Bulgakov", 
+	# 	role: "Sapper", 
+	# 	birthplace: "Grozny", 
+	# 	bio: "TBD"
+	# }	
 ]
 
 
@@ -65,19 +65,19 @@ locations_list = [
 		id: 4,
 		name: ,
 		description:
-	},
-
-	{
-		id: 5,
-		name: ,
-		description:
-	},
-
-	{
-		id: 6
-		name: ,
-		description: 
 	}
+
+	# {
+	# 	id: 5,
+	# 	name: ,
+	# 	description:
+	# },
+
+	# {
+	# 	id: 6
+	# 	name: ,
+	# 	description: 
+	# }
 
 ]
 
@@ -87,7 +87,7 @@ items_list = [
 		id: 1,
 		name: "",
 		description: "",
-		location_id: ,
+		location_id: 1,
 		character_id: nil
 	}
 

@@ -86,9 +86,4 @@ class ApplicationController < Sinatra::Base
   get '/game/victory' do 
   	erb :"chapters/victory"
   end
-
-
-
-
-
 end

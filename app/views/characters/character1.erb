@@ -2,12 +2,12 @@
 <body>
 
 
-	<h1>Choose Your Character</h1>
+	<h1>You'll be playing as:</h1>
 
 		<img src="http://s2.postimg.org/58tqzhwd5/russia_sniper31.jpg" width="300" height="350" alt="alina-sniper"><br>
 
 	<form action="/game/chapter1" method="POST">
-		Select Character: <input type="submit" value="Alina" name="character[first_name]">
+		Begin Game: <input type="submit" value="Alina" name="character[first_name]">
 		
 		<p>Name: <%= @alina.first_name + " " + @alina.last_name %></p>
 		<p>Rank: <%= @alina.rank %></p>
@@ -16,12 +16,12 @@
 		<p>Bio: <%= @alina.bio %></p>
 	</form>
 
-	<div class="button-bar">
-		<!-- for example -->
-	  <a href="/characters/4" class="button prev">Previous</a>
+<!-- 	<div class="button-bar"> -->
+
+<!-- 	  <a href="/characters/4" class="button prev">Previous</a>
 	  
 	  <a href="/characters/2" class="button next">Next</a>
 	</div>
-
+ -->
 
 </body>
