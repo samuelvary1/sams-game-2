@@ -9,21 +9,37 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/pickup' do 
+    # good start here just base the ids off the submit form and keep working on this
+    # all you have to do is seed the area with the items you want and you're halfway there
+    # then write a controller action that checks if the item from the first area is in the character's
+    # inventory and if they don't have it, raise an exception or something. If they do have it, redirect to 
+    # the following chapter
+
+    # you should eventually be able to make everything dynamic. Do not let this project die until you have accomplished that by god.
+    # otherwise stick with one character for now I guess and eventually add sessions and a login so the player can
+    # come back and finish their game later.
+    @items = Location.find_by(params[:id]).items
+    @area = Location.find_by(params[:id])
     erb :pickup
   end
 
   post '/pickup' do 
-    items = Location.first.items
-    pickup = items.find do |item|
+    @items = Location.find_by(params[:id]).items
+
+    @area = Location.find_by(params[:id])
+    @character = Character.first
+    # binding.pry
+    @pickup = @items.find do |item|
       item.name == params[:item][:name]
+
     end
 
-    if pickup.nil?
+    if @pickup.nil?
       "Sorry, that item isn't here"
+
     else
-      pickup.location_id = nil
-      Character.first.items << pickup
-      "You picked up #{pickup.name}"
+      @character.pickup_item(@pickup, @area)
+
     end
   end
 
@@ -34,22 +50,25 @@ class ApplicationController < Sinatra::Base
   # end
 
   post '/game/chapter1' do 
+
+    @area = Location.first
     @character = Character.find_by(first_name: params[:character][:first_name])
-
-    @character.save
-
-    @area1 = Location.all[0]
-    # binding.pry
-
+    binding.pry 
     erb :"chapters/chapter1"
   end
 
   get '/game/chapter1' do 
+
     erb :"chapters/chapter1"
   end
 
-  post '/current_items' do 
+  get '/game/chapter1/details' do
+    erb :"details/chapter1"
+  end
+
+  get '/current_items' do 
     # binding.pry
+    @character = Character.first
     erb :"characters/items"
   end
 

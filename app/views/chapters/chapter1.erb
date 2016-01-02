@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Sam's Adventure Game</title>
-		<link rel="stylesheet" href="../stylesheets/style.css" text"text/css">
-	</head>
+
 <body>
 	
 	<h2>Chapter 1</h2>
@@ -14,22 +8,22 @@
 		<p>You find yourself in a strange apartment. It appears to be the middle of the night, and you have no idea how you got there.</p>
 
 
-	<div class="actions">
-		<input type="submit" value="Story Text">
-		<input type="submit" value="Look Around">
-		
+		<div class="actions">
+			<form action="/game/chapter1/details" method="GET">
+				<input type="submit" value="Look Around">
+			</form>
 
-		<form action="/pickup" method="GET">
-			<input type="submit" value="Pick Up Object">
-		</form>
-		
+			<form action="/pickup" method="get">
+				<input type="submit" value="Pick Up Object">
+			</form>
+			
 
-		<form action="/current_items" method="POST">
-			<input type="submit" value="View Inventory">
-		</form>
+			<form action="/current_items" method="get">
+				<input type="submit" value="View Inventory">
+			</form>
 
-		<input type="submit" value="Go to Next Location">
+			<input type="submit" value="Go to Next Location">
 
-	</div>
+		</div>
 </body>
 </html>
