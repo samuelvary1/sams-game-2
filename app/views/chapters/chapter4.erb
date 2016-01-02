@@ -2,24 +2,31 @@
 <body>
 	
 	<h2>Chapter 4</h2>
-
-	<!-- chapter image -->
 	
+		<!-- img here -->
 
-	<!-- story text	 -->
+		<!-- description here -->
+		<p>Description of the actual action of the plot goes here2</p>
 
+		<!-- absolutely need to make this menu bar part of the layout, and dynamic so 
+		that it works on every page  -->
+		<div class="actions">
+			<form action="/game/chapter4/details" method="GET">
+				<input type="submit" value="Look Around">
+			</form>
 
-	<!-- action menu -->
+			<form action="/pickup" method="GET">
+				<input type="submit" value="Pick Up Object">
+			</form>
+			
 
-	<div class="actions">
-		<input type="submit" value="Story Text">
-		<input type="submit" value="Look Around">
-		<input type="submit" value="Pick Up Object">
-		<input type="submit" value="View Inventory">
-		<input type="submit" value="Go to Next Location">
-		<input type="submit" value="Go to Previous Location">
+			<form action="/current_items" method="GET">
+				<input type="submit" value="View Inventory">
+			</form>
 
-
-	</div>
+			<form action="/victory" method="GET">
+				<input type="submit" value="Go to Next Location">
+			</form>
+		</div>
 </body>
 </html>
