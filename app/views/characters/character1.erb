@@ -6,7 +6,7 @@
 
 		<img src="http://s2.postimg.org/58tqzhwd5/russia_sniper31.jpg" width="300" height="350" alt="alina-sniper"><br>
 
-	<form action="/game/chapter1" method="POST">
+	<form action="/game/chapter1/plot" method="POST">
 		Begin Game: <input type="submit" value="Alina" name="character[first_name]">
 		
 		<p>Name: <%= @alina.first_name + " " + @alina.last_name %></p>
@@ -15,13 +15,5 @@
 		<p>Birthplace: 	<%= @alina.birthplace %></p>
 		<p>Bio: <%= @alina.bio %></p>
 	</form>
-
-<!-- 	<div class="button-bar"> -->
-
-<!-- 	  <a href="/characters/4" class="button prev">Previous</a>
-	  
-	  <a href="/characters/2" class="button next">Next</a>
-	</div>
- -->
 
 </body>

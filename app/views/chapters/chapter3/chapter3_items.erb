@@ -1,0 +1,14 @@
+
+<body>
+	
+		<p>You are currently holding:</p><br>
+
+
+			<% @character.items.each do |item| %>
+				<p><%= item.name.capitalize %></p>
+				<p><%= item.description.capitalize %></p>
+				</tr>	
+			<% end %>
+
+</body>
+</html>

@@ -45,27 +45,26 @@ locations_list = [
 	{
 		id: 1, 
 		name: "apartment",
-		description: "It appears to be an old, abandoned apartment"
+		description: "It appears to be an old, abandoned apartment."
+	}, 
 
+	{
+		id: 2,
+		name: "street",
+		description: "What may once have been a bustling thoroughfare is now pocked with craters and covered in rubble."
+	},
+
+	{
+		id: 3,
+		name: "the forest",
+		description: "The moon casts eerie shadows throughout a sparse forest on the edge of town."
+	},
+
+	{
+		id: 4,
+		name: "the bunker",
+		description: "a German pillbox. The corpse of a machine-gunner lies slumped over his weapon. Boxes of ammunition line the walls."
 	}
-
-	# {
-	# 	id: 2,
-	# 	name: ,
-	# 	description: 
-	# },
-
-	# {
-	# 	id: 3,
-	# 	name: ,
-	# 	description: 
-	# },
-
-	# {
-	# 	id: 4,
-	# 	name: ,
-	# 	description:
-	# }
 
 	# {
 	# 	id: 5,
@@ -95,6 +94,22 @@ items_list = [
 		id: 2,
 		name: "key",
 		description: "an old brass key with a skull as the handle",
+		location_id: 1,
+		character_id: nil
+	},
+
+	{
+		id: 3,
+		name: "bandages",
+		description: "a ragged handful of somewhat used first aid supplies. could come in handy.",
+		location_id: 1, 
+		character_id: nil
+	},
+
+	{
+		id: 4,
+		name: "rifle",
+		description: "a battered hunting rifle that looks like it last saw action when Lenin was young.",
 		location_id: 1,
 		character_id: nil
 	}
