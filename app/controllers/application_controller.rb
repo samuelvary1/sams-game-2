@@ -73,9 +73,14 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/game/chapter2' do 
+    # @character = Character.first
+    # if @character.items.include?(key)
     @area2 = Location.all[1]
     
   	erb :"chapters/chapter2"
+
+    # else
+    # "sorry, that door is locked. You can't get out."
   end
 
   get '/game/chapter3' do 
