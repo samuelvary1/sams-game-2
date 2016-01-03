@@ -57,7 +57,4 @@ class ApplicationController < Sinatra::Base
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_items"
   end
 
-  get '/victory' do 
-  	erb :victory
-  end
 end
