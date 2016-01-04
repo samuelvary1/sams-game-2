@@ -28,11 +28,20 @@
 		</p>
 	
 	<% elsif @character.items.find_by(id: 4) != nil && @character.items.find_by(id: 8) == nil %>
+		<% @status = "dead" %>
+		<h3>Game Over</h3>
 		<p>You have the rifle but not the ammo. You're a dead duck</p>
+		<a href="/chapter1/plot">Start over?</a>
 	<% elsif @character.items.find_by(id: 4) == nil && @character.items.find_by(id: 8) != nil %>
+		<h3>Game Over</h3>
+		<% @status = "dead" %>
 		<p>You have the ammo but not the rifle. You're a dead duck.</p>
+		<a href="/chapter1/plot">Start over?</a>
 	<% else %>
+		<h3>Game Over</h3>
+		<% @status = "dead" %>
 		<p>You don't have either, you're totally defenseless. Game over.</p>
+		<a href="/chapter1/plot">Start over?</a>
 	<% end %>
 
 </body>

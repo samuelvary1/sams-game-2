@@ -25,7 +25,7 @@
 </head>
 <body>	
 
-	<% unless @location == nil %>
+	<% unless @location == nil || @status == "dead" %>
 
 		<div class="actions">
 			<form action="/chapter<%= @location.id %>/plot" method="GET">
@@ -56,10 +56,15 @@
 				<input type="submit" value="Go to Next Location">			
 			</form>
 
-			<% elsif @location.id != 1 && @location.id != nil %>
+			<% elsif @location.id != 1 && @location.id != nil && @location.id != 4 %>
 			
 			<form action="/chapter<%= @location.id + 1 %>/plot" method="GET">
 				<input type="submit" value="Go to Next Location">			
+			</form>
+
+			<% elsif @location.id == 4 %>
+			<form action="/chapter<%= @location.id + 1 %>/plot" method="GET">
+				<input type="submit" value="Try to Save Medvedev">
 			</form>
 
 			<% else %>

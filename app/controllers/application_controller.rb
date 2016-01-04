@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
 
     if @pickup.nil?
       # binding.pry
-      
       "Sorry, that item isn't here"
       # how do i display this message on the page without going to a blank white page (with the text)
     else
@@ -36,7 +35,8 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/:chapter/plot' do 
+  get '/:chapter/plot' do
+    @status = "alive" 
     # if Location.first.items.find_by(id: 2)
     @character = Character.first
     @location = Location.find_by(id: params[:chapter][-1])

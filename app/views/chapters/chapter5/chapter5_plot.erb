@@ -2,33 +2,56 @@
 <!-- if @character.items.include?(peaches) && @character.items.include?(bandages) -->
 <!-- if you have the right items to save medvedev -->
 
-<h1> Victory! </h1>
+
+	<% if @character.items.find_by(id: 1) != nil && @character.items.find_by(id: 3) != nil && @character.items.find_by(id: 9) != nil %>
+	<h1> Victory! </h1>
 
 	<p>
-		Explanation of how you saved the lieutenant with the bandages and the peaches cause he was wounded and starving.
+		Explanation of how you saved the lieutenant with the bandages and the peaches and the vodka cause he was wounded and starving and you used the vodka as disinfectant.
 	</p>
-<!-- if you only have peaches -->
+
+	<% elsif @character.items.find_by(id: 1) != nil && @character.items.find_by(id: 3) == nil && @character.items.find_by(id: 9) == nil %>
+
+	<h3>Game Over!</h3>
 
 	<p>
-		(or)
+		You have the vodka but not the peaches or the bandages. You get drunk but Medvedev dies.
 	</p>
 
-<h1>Game Over</h1>
+	<% elsif @character.items.find_by(id: 1) == nil && @character.items.find_by(id: 3) != nil && @character.items.find_by(id: 9) == nil %>
+
+	<h3>Game Over!</h3>
 
 	<p>
-		(if you only have the peaches but didn't get the bandages and/or disinfectant from chapter 1)
+		You have the bandages and peaches but no vodka. Medvedev dies of infection cause you don't have a good disinfectant.
 	</p>
+
+	<% elsif @character.items.find_by(id: 1) != nil && @character.items.find_by(id: 3) == nil && @character.items.find_by(id: 9) != nil %>
+
+
+	<h3>Game Over!</h3>
 
 	<p>
-		Since you didn't have the bandages, Medvedev died of gangrene and you are blamed for his death. At least he had a full belly!
+		You have bandages and vodka but no peaches. Medvedev turns into a zombie and tries to eat you and you are forced to shoot him.
 	</p>
 
-	<p>
-		(or)
-	</p>
+	<% elsif @character.items.find_by(id: 1) == nil && @character.items.find_by(id: 3) == nil && @character.items.find_by(id: 9) != nil %>
+ %>
 
-	<p>
-		Since you didn't have the peaches, Medvedev starved to death, in spite of the fact that you were able to patch up his wounds.
-	</p>
+ 	<h3>Game Over!</h3>
 
-<a href="/">Play again?</a>
+ 	<p>
+ 		You have the peaches but no bandages or vodka. He dies.
+ 	</p>
+
+ 	<% else %>
+
+ 	<h3>Game Over!</h3>
+
+ 	<p>You didn't pick up any of the three things that you needed to save him. Were you even paying attention?</p>
+
+<% end %>
+
+
+
+<a href="/chapter1/plot">Play again?</a>
