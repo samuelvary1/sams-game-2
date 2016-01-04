@@ -38,6 +38,7 @@ class ApplicationController < Sinatra::Base
 
   get '/:chapter/plot' do 
     # if Location.first.items.find_by(id: 2)
+    @character = Character.first
     @location = Location.find_by(id: params[:chapter][-1])
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_plot"
   end

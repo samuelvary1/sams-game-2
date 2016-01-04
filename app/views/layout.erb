@@ -44,7 +44,7 @@
 				<input type="submit" value="View Inventory">
 			</form>
 
-			<% if @location.id != 1 %>
+			<% if @location.id != 1 && @location.id != nil %>
 				<form action="/chapter<%= @location.id - 1 %>/plot" method="GET">
 					<input type="submit" value="Go to Previous Location">
 				</form>			
@@ -52,6 +52,12 @@
 
 			<% if @location.id == 1 && @location.items.find_by(id: 2) == nil %>
 
+			<form action="/chapter<%= @location.id + 1 %>/plot" method="GET">
+				<input type="submit" value="Go to Next Location">			
+			</form>
+
+			<% elsif @location.id != 1 && @location.id != nil %>
+			
 			<form action="/chapter<%= @location.id + 1 %>/plot" method="GET">
 				<input type="submit" value="Go to Next Location">			
 			</form>
