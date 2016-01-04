@@ -16,7 +16,6 @@ class ApplicationController < Sinatra::Base
 
   post '/:chapter/pickup' do 
     @location = Location.find_by(id: params[:chapter][-1])
-    # binding.pry
     @items = @location.items
     @character = Character.first
     # binding.pry
@@ -26,8 +25,13 @@ class ApplicationController < Sinatra::Base
 
     if @pickup.nil?
       "Sorry, that item isn't here"
+      # redirect to '/chapter#{params[:chapter]}/pickup'
+      # how do i display this message on the page without going to a blank white page (with the text)
     else
       @character.pickup_item(@pickup, @location)
+      "You have picked up the #{@pickup.name}"
+      # redirect to '/chapter#{params[:chapter]}/pickup'
+      # how do i display this message on the page without going to a blank white page (with the text)
     end
   end
 

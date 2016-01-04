@@ -6,7 +6,6 @@ class Character < ActiveRecord::Base
 		self.items << item
 		location.items.delete(item)
 		item.location_id = nil
-		"You have picked up the #{item.name}."
 	end
 
 end

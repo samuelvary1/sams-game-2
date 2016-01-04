@@ -2,15 +2,7 @@ class CharacterController < ApplicationController
 
 	enable :method_override
 
-
-  # get '/characters/:id' do
-  # 	@characters = Character.all
-  # 	@characters.select do |character|
-  # 		character.id == params[:id]
-  # 	end.first
-  # 	erb :'/characters/character'
-  # end
-
+  # make these dynamic 
   get '/characters/1' do 
     @alina = Character.find_by(id: 1)
     erb :"characters/character1"
