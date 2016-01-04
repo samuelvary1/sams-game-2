@@ -1,3 +1,7 @@
+Character.delete_all
+Item.delete_all
+Location.delete_all
+
 characters_list = [
 	{ 
 		id: 1,
@@ -66,18 +70,6 @@ locations_list = [
 		description: "a German pillbox. The corpse of a machine-gunner lies slumped over his weapon. Boxes of ammunition line the walls."
 	}
 
-	# {
-	# 	id: 5,
-	# 	name: ,
-	# 	description:
-	# },
-
-	# {
-	# 	id: 6
-	# 	name: ,
-	# 	description: 
-	# }
-
 ]
 
 
@@ -112,7 +104,48 @@ items_list = [
 		description: "a battered hunting rifle that looks like it last saw action when Lenin was young.",
 		location_id: 1,
 		character_id: nil
+	},
+
+	{
+		id: 5,
+		name: "paper",
+		description: "some scraps of paper from the fireplace. You might be able to piece them together later for valuable intelligence.",
+		location_id: 1,
+		character_id: nil
+	},
+
+	{
+		id: 6,
+		name: "trashcan lid",
+		description: "An aluminum lid from a knocked over trashcan. Might stop a bullet. Might not.",
+		location_id: 2,
+		character_id: nil
+	},
+
+	{
+		id: 7,
+		name: "cobblestone",
+		description: "a broken-off piece of paving stone that is just small enough to fit in your hand.",
+		location_id: 2,
+		character_id: nil
+	},
+
+	{
+		id: 8,
+		name: "ammo",
+		description: "a box of shells that miraculously matches the hunting rifle",
+		location_id: 2,
+		character_id: nil
+	},
+
+	{
+		id: 9,
+		name: "peaches",
+		description: "a can of peaches that is remarkably sealed and appears undamaged.",
+		location_id: 2,
+		character_id: nil
 	}
+
 
 ]
 

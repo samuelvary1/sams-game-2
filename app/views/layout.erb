@@ -12,24 +12,20 @@
 		<h2>Chapter 2: The Street</h2>
 	<% elsif @location == Location.third %>
 		<title>Chapter 3: The Forest</title>
-		<img src="" alt="">
-		<h2>Chapter 3: The Forest</h2>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Monte_Cassino.jpg" alt="forest">
+		<h2>Chapter 3: Edge of Town</h2>
 	<% elsif @location == Location.fourth %>
-		<title>Chapter 4: The Bunker</title>
-		<img src="" alt="">
+		<title>Chapter 4: The Forest</title>
+		<img src="http://image.naldzgraphics.net/2012/10/26-black-white-dead-tree-forest-scary.jpg" alt="">
 		<h2>Chapter 4: The Bunker</h2>
 	<% end %>
 
 	<link rel="stylesheet" href="../../stylesheets/style.css" text"text/css">
 
 </head>
-<body>
-	
-	<%= yield %>
+<body>	
 
 	<% unless @location == nil %>
-
-
 
 		<div class="actions">
 			<form action="/game/chapter<%= @location.id %>/plot" method="POST">
@@ -48,12 +44,21 @@
 				<input type="submit" value="View Inventory">
 			</form>
 
+			<% if @location.id != 1 %>
+				<form action="/game/chapter<%= @location.id - 1 %>/plot" method="POST">
+					<input type="submit" value="Go to Previous Location">
+				</form>			
+			<% end %>	
+
 			<form action="/game/chapter<%= @location.id + 1 %>/plot" method="POST">
 				<input type="submit" value="Go to Next Location">
 			</form>
 		</div>
 
 	<% end %>
+	
+	<%= yield %>
+
 
 </body>
 </html>

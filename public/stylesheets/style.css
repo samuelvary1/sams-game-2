@@ -3,3 +3,32 @@ body {
   background-color: #D4F5F5;
   color: #554348
 }
+
+img {
+	height: 300px;
+	width: 300px;
+	border: 3px solid black;
+}
+
+img.intro {
+	width: 400px;
+}
+
+h1 {
+	font-family: "Georgia";
+}
+
+h2 {
+	font-family: "Georgia";
+}
+
+p {
+	font-family: "Georgia";
+	margin-right: 100px;
+	margin-left: 100px;
+	text-align: left;
+}
+
+form {
+	display: inline-block;
+}
