@@ -18,20 +18,16 @@ class ApplicationController < Sinatra::Base
     @location = Location.find_by(id: params[:chapter][-1])
     @items = @location.items
     @character = Character.first
-    # binding.pry
     @pickup = @items.find do |item|
       item.name == params[:item][:name]
     end
 
     if @pickup.nil?
       # binding.pry
-      "Sorry, that item isn't here"
-      # how do i display this message on the page without going to a blank white page (with the text)
+      erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_noitem"
     else
       @character.pickup_item(@pickup, @location)
-      "You have picked up the #{@pickup.name}"
-      # redirect to '/chapter#{params[:chapter]}/pickup'
-      # how do i display this message on the page without going to a blank white page (with the text)
+      erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_founditem"
     end
   end
 
