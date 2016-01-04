@@ -31,12 +31,12 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/game/:chapter/plot' do 
+  get '/:chapter/plot' do 
     @location = Location.find_by(id: params[:chapter][-1])
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_plot"
   end
 
-  post '/game/:chapter/plot' do 
+  post '/:chapter/plot' do 
     # binding.pry
     @location = Location.find_by(id: params[:chapter][-1])
     @character = Character.first
@@ -44,12 +44,12 @@ class ApplicationController < Sinatra::Base
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_plot"
   end
 
-  post '/game/:chapter/details' do
+  post '/:chapter/details' do
     @location = Location.find_by(id: params[:chapter][-1])
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_details"
   end
 
-  get '/game/:chapter/current_items' do 
+  get '/:chapter/current_items' do 
     # binding.pry
     @character = Character.first    
     @location = Location.find_by(id: params[:chapter][-1])
