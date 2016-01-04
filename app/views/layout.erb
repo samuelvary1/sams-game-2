@@ -28,11 +28,11 @@
 	<% unless @location == nil %>
 
 		<div class="actions">
-			<form action="/chapter<%= @location.id %>/plot" method="POST">
+			<form action="/chapter<%= @location.id %>/plot" method="GET">
 				<input type="submit" value="Story Text">
 			</form>
 
-			<form action="/chapter<%= @location.id %>/details" method="POST">
+			<form action="/chapter<%= @location.id %>/details" method="GET">
 				<input type="submit" value="Look Around">
 			</form>
 
@@ -45,13 +45,23 @@
 			</form>
 
 			<% if @location.id != 1 %>
-				<form action="/chapter<%= @location.id - 1 %>/plot" method="POST">
+				<form action="/chapter<%= @location.id - 1 %>/plot" method="GET">
 					<input type="submit" value="Go to Previous Location">
 				</form>			
 			<% end %>	
 
-			<form action="/chapter<%= @location.id + 1 %>/plot" method="POST">
-				<input type="submit" value="Go to Next Location">
+			<% if @location.id == 1 && @location.items.find_by(id: 2) == nil %>
+
+			<form action="/chapter<%= @location.id + 1 %>/plot" method="GET">
+				<input type="submit" value="Go to Next Location">			
+			</form>
+
+			<% else %>
+				<form action="/chapter<%= @location.id %>/fail" method="GET">
+					<input type="submit" value="Go to Next Location">
+				</form>
+			<% end %>
+
 			</form>
 		</div>
 

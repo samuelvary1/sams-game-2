@@ -5,7 +5,7 @@ chapter 1:
 
 must pick up bandages, vodka, rifle, key
 
-cannot proceed to chapter 2 without picking up key
+√ cannot proceed to chapter 2 without picking up key
 
 (think of a purpose for the vodka?)
 
@@ -15,6 +15,8 @@ chapter 2:
 must pick up peaches, ammo
 
 you can also pick up trashcan lid and a cobblestone but i haven't thought of a purpose for these yet
+
+you can proceed to chapter 3 without picking anything up
 
 chapter 3:
 ----------

@@ -82,7 +82,7 @@ items_list = [
 		character_id: nil
 	},
 
-	{
+	key = {
 		id: 2,
 		name: "key",
 		description: "an old brass key with a skull as the handle",

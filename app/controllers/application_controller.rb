@@ -24,8 +24,9 @@ class ApplicationController < Sinatra::Base
     end
 
     if @pickup.nil?
+      # binding.pry
+      
       "Sorry, that item isn't here"
-      # redirect to '/chapter#{params[:chapter]}/pickup'
       # how do i display this message on the page without going to a blank white page (with the text)
     else
       @character.pickup_item(@pickup, @location)
@@ -36,19 +37,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/:chapter/plot' do 
+    # if Location.first.items.find_by(id: 2)
     @location = Location.find_by(id: params[:chapter][-1])
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_plot"
   end
 
-  post '/:chapter/plot' do 
-    # binding.pry
-    @location = Location.find_by(id: params[:chapter][-1])
-    @character = Character.first
-    # binding.pry
-    erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_plot"
-  end
-
-  post '/:chapter/details' do
+  get '/:chapter/details' do
     @location = Location.find_by(id: params[:chapter][-1])
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_details"
   end
@@ -61,4 +55,9 @@ class ApplicationController < Sinatra::Base
     erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_items"
   end
 
+  get '/:chapter/fail' do 
+    @location = Location.find_by(id: params[:chapter][-1])
+
+    erb :"chapters/#{params[:chapter]}/#{params[:chapter]}_fail"
+  end
 end
